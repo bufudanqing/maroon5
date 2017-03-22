@@ -326,11 +326,16 @@ $(document).ready(function(){
                // document.getElementById("status").innerHTML = '正在登录中...';
             },
             success:function(data){
-            	// $("#result").html(data);
+            	
             	console.log(data);
-            	alert(data);
+            	// alert(data);
             	$("#edit-name").val(" ");
             	$("#edit-pass").val(" ");
+            	// $("#user-login-register").hide();
+            	$("#popup-box1").hide();
+            	//login部分变化为用户头像和账户
+            	$(".user-link-login").css({"display":"none"});
+            	$(".user-menu").append(data);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
 				 alert(XMLHttpRequest.status);
@@ -343,4 +348,40 @@ $(document).ready(function(){
 
 });
 
-
+//======================
+//注册
+$(document).ready(function(){
+    
+    $(document).on('click','#reg-submit',function(){
+        
+        var regemail = $("#reg-email").val();
+        var username = $("#edit-name-2").val();
+        var pwd1 = $("#edit-pass-pass1").val();
+        var pwd2 = $("#edit-pass-pass2").val();
+        var postcode = $("#edit-post").val();
+        // alert (regemail);
+        $.ajax({
+        	url:"functions/php/register.php",
+        	type:"POST",
+        	data:{
+        		regemail:regemail,
+                username:username,
+                pwd1:pwd1,
+                pwd2:pwd2,
+                postcode:postcode
+        	},
+        	error:function(XMLHttpRequest,textStatus,errorThrown){
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+        	},
+        	success:function(data){
+                console.log(data);
+                alert(data);
+                //隐藏登录窗口
+                // $("#popup-box1").hide();
+        	},
+        });
+       return false;
+    });
+});

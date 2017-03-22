@@ -355,12 +355,15 @@ nav #menu-wrap {
 
 	width: 91px;
 	height: 80px;
+	width: auto;
+
 }
-#user-menu-nav .user-menu li{
+#user-menu-nav .user-menu .user-link-login{
 	list-style: none;
 	display: block;
 	width: 91px;
 	height: 80px;
+	/*width: auto;*/
 
 }
 .user-menu .user-link-login a{
@@ -371,6 +374,7 @@ nav #menu-wrap {
 	position: relative;
 	top:32px;
 	width: 75px;
+	/*width: auto;*/
 	height: 80px;
 	padding: 0 11px;
 	font-family: Montserrat, helvetica;
@@ -380,11 +384,61 @@ nav #menu-wrap {
 .user-menu .user-link-login a i{
 	display:inline-block;
 	padding-right: 4px;
+	
 }
 .user-menu .user-link-login a:hover{
 	color:#FE4C6E;
 	transition: color 0.3s;
 }
+
+/*用户头像和用户名显示部分*/
+#user-menu-nav .user-menu .user-profile{
+	/*display: none;*/
+	cursor: pointer;
+	
+	list-style: none;
+	line-height: 80px;
+	height: 85px;
+	/*text-align: center;*/
+
+}
+#user-menu-nav .user-menu .user-profile:hover{
+	background-color: #FEFEFE;
+
+}
+#user-menu-nav .user-menu .user-profile:hover span{
+	color: #000;
+}
+#user-menu-nav .user-menu .user-profile .menu-dropdown{
+	display: none;
+}
+#user-menu-nav .user-menu .user-profile:hover .menu-dropdown{
+    display: block;
+    z-index: 25;
+}
+#user-menu-nav .user-menu .user-profile a{
+	text-align: center;
+}
+#user-menu-nav .user-menu .user-profile a img{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+}
+#user-menu-nav .user-menu .user-profile a span{
+	font-family: Montserrat,helvetica;
+	text-transform: uppercase;
+	letter-spacing: 0.2px;
+	font-size: 15px;
+	color: #efefef;
+}
+
+#user-menu-nav .user-menu .user-profile .menu-dropdown li{
+
+}
+
+
+
 
 /*登录注册部分*/
 /*.popup-position是设置背景阴影部分*/

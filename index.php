@@ -1,9 +1,16 @@
 <?php
+   session_start();
+
    // include "maroon5/includes/dbh.php";
    define ("root",$_SERVER['DOCUMENT_ROOT']);//定义根目录为常量
    include root."maroon5/includes/dbh.php";
-   session_start();
 
+   if(isset($_SESSION['id'])){
+       // echo $_SESSION['id'];
+    // header("Location:index.php");
+
+   }
+   
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +28,7 @@
 
 </head>
 <body>
-<!-- 页面左下角图标 -->
+<!-- 页面左下角图标 ASD-->
     <div class="compaign-container">
         <div class="td-col">
             <div class="compaign-avatar-container">
@@ -151,7 +158,7 @@
                     </label>
                     <div class="tab-content">
                         <section class="social-links">
-                            <a class="ae-link login facebook" href="#">
+                            <a class="ae-link register facebook" href="#">
                                 <i class="fa fa-facebook"></i>
                                 <span class="label">
                                     <span class="auth-action">Register</span>
@@ -160,7 +167,7 @@
                                 </span>
                             </a>
                        
-                            <a class="ae-link login twitter" href="#">
+                            <a class="ae-link register twitter" href="#">
                                 <i class="fa fa-twitter "></i>
                                 <span class="label">
                                     <span class="auth-action">Register</span>
@@ -169,7 +176,7 @@
                                 </span>
                             </a>
                         
-                            <a class="ae-link login google" href="#">
+                            <a class="ae-link register google" href="#">
                                 <i class="fa fa-google"></i>
                                 <span class="label">
                                     <span class="auth-action">Register</span>
@@ -184,48 +191,49 @@
                             <span></span>
                         </div>
                      <!--注册 -->
-                        <section class="user-login-forms">
-                            <div class="login-pass">
-                                <form id="userid"  class="user-login-id" action="" method="">
+                        <section class="user-register-forms">
+                            <div class="register-pass">
+                                <form id=""  class="user-reg-id" >
                                     <div style="height: 204px;">
                                         <div class="form-name form-it">
-                                            <label for="edit-email" style="font-family: fontello;">
+                                            <label for="reg-email" style="font-family: fontello;">
                                                 E-mail Address<span style="color: red;">*</span><br/>
 
                                             </label>
-                                             <input id="edit-email" class="form-text-req" type="text" name="email-add" maxlength="60" />
+                                             <input id="reg-email" required="required" class="form-text-req" type="email" name="regemail" maxlength="60" />
                                         </div>
                                         <div class="form-pass form-it" id="it">
                                             <label for="edit-name-2">
                                                 USERNAME<span style="color: red;">*</span><br/>
 
                                             </label>
-                                             <input id="edit-name-2" class="form-text-req" type="text" name="uid" maxlength="60" />
+                                             <input id="edit-name-2" required="required" class="form-text-req" type="text" name="username" maxlength="60" />
                                         </div>
                                         <div class="form-name form-it">
                                             <label for="edit-pass-pass1" style="font-family: fontello;">
                                                 PASSWORD<span style="color: red;">*</span><br/>
 
                                             </label>
-                                             <input id="edit-pass-pass1" class="form-text-req" type="text" name="pwd" maxlength="60" />
+                                             <input id="edit-pass-pass1" required="required" class="form-text-req" type="password" name="pwd1" maxlength="60" />
                                         </div>
                                         <div class="form-name form-it">
                                             <label for="edit-pass-pass2" style="font-family: fontello;">
                                                CONFIRM PASSWORD<span style="color: red;">*</span><br/>
 
                                             </label>
-                                             <input id="edit-pass-pass2" class="form-text-req" type="text" name="pwd2" maxlength="60" />
+                                             <input id="edit-pass-pass2" required="required" class="form-text-req" type="password" name="pwd2" maxlength="60" />
                                         </div>
                                         <div class="form-name form-it">
                                             <label for="edit-post" style="font-family: fontello;">
                                                 POSTAL CODE<span style="color: red;">*</span><br/>
 
                                             </label>
-                                             <input id="edit-post" class="form-text-req" type="text" name="postcode" maxlength="60" />
+                                             <input id="edit-post" required="required" class="form-text-req" type="text" name="postcode" maxlength="60" />
                                         </div>
-                                        <!-- login按钮 -->
+                                        <!-- 注册按钮 -->
                                         <div class="form-ac">
-                                            <input  id="bolero-user-register-submit" class="form-submit" type="submit" name="" value="Create New Account">
+                                            <!-- <input  id="bolero-user-register-submit" class="form-submit" type="submit" name="" value="Create New Account"> -->
+                                            <button id="reg-submit">Create New Account</button>
                                            
                                         </div>
                                     </div>
@@ -293,7 +301,7 @@
     		<!-- logo和菜单导航 -->
     		<div class="nav-header">
                 <nav class="navigation">
-                    <div class="branding"><a href="localhost/maroon5/index.php" title="Home"><img src="images/logo.png"></a></div>
+                    <div class="branding"><a href="index.php" title="Home"><img src="images/logo.png"></a></div>
                     <div class="menu-navigation">
                         <nav id="menu-wrap">
                             <ul class="menu">
@@ -314,27 +322,27 @@
                                     <a href="javascript:void(0)" class="user-login"  id="user-login" onclick="toggle_visibility('popup-box1');"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
                                 </li>
                                 <!-- 显示用户名和用户菜单 -->
-                                <!-- <li>
-                                    <a class="user-profile" >
-                                        <i class="fa fa-headphones" aria-hidden="true"></i>
-                                        <span class="user-username"></span>
-                                    </a>
-                                    <ul class="menu-dropdown">
-                                        <li class="user--profile" style="color: pink;"><a class="user-parent-profile" href=""><i class="fa fa-user" aria-hidden="true"></i>VIEW PROFILE</a></li>
-                                       <li class="user--verify--account"> <a class="user-parent-account" href=""><i class="fa fa-envelope-o" aria-hidden="true"></i>VERIFY ACCOUNT</a></li>
-                                        <li class="user--logout"><a class="user-parent-logout" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</a></li>
-                                    </ul>
+                                <!-- <li class="user-profile">
+                                        <a class="user-profile" >
+                                            <img src = "images/userpic/0.jpg" />
+                                            <span class="user-username"></span>
+                                        </a>
+                                        <ul class="menu-dropdown">
+                                            <li class="user-pro" style="color: pink;"><a class="user-parent-profile" href="">VIEW PROFILE</a></li>
+                                            <li class="user-verify-account"> <a class="user-parent-account" href=""><i class="fa fa-envelope-o" aria-hidden="true"></i>VERIFY ACCOUNT</a></li>
+                                            <li class="user-logout"><a class="user-parent-logout" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</a></li>
+                                        </ul>
                                 </li> -->
                             </ul>
-                         <!--    <?php
-                                // if (isset($_SESSION[id])) {
+                          <?php
+                                if (isset($_SESSION[id])) {
                                     //显示用户名
-
-                                // } else {
+                                     echo $_SESSION['id'];
+                                } else {
                                     //显示register
 
-                                // }
-                            ?> -->
+                                }
+                            ?>  
                         </nav>
 
                     </div>
