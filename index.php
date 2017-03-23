@@ -5,11 +5,24 @@
    define ("root",$_SERVER['DOCUMENT_ROOT']);//定义根目录为常量
    include root."maroon5/includes/dbh.php";
 
-   if(isset($_SESSION['id'])){
-       // echo $_SESSION['id'];
-    // header("Location:index.php");
+  
+    if (isset($_SESSION["id"])) {
+        //显示用户名
+        // echo $_SESSION["id"];
+        require("functions/php/header_login.php");
 
-   }
+        echo "<script type='text/javascript'>";
+        echo "window.onload = function(){";   
+        echo "var login = document.getElementById('login-li');"  ;
+        echo " login.style.display = 'none'; ";    
+        echo "}";    
+        echo " </script>" ;
+    } else {
+        //显示register
+        require("index.php");
+
+    }
+
    
 ?>
 <!DOCTYPE html>
@@ -318,7 +331,7 @@
                         <!-- LOGIN 和 LOGOUT -->
                         <nav id="user-menu-nav">
                             <ul class="user-menu">
-                                <li class="user-link-login" >
+                                <li class="user-link-login" id="login-li" >
                                     <a href="javascript:void(0)" class="user-login"  id="user-login" onclick="toggle_visibility('popup-box1');"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
                                 </li>
                                 <!-- 显示用户名和用户菜单 -->
@@ -334,15 +347,9 @@
                                         </ul>
                                 </li> -->
                             </ul>
-                          <?php
-                                if (isset($_SESSION[id])) {
-                                    //显示用户名
-                                     echo $_SESSION['id'];
-                                } else {
-                                    //显示register
+                      
 
-                                }
-                            ?>  
+
                         </nav>
 
                     </div>
