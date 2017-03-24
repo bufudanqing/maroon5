@@ -18,9 +18,9 @@
     echo  $row["username"]."</span>
             </a>
             <ul class='menu-dropdown'>
-                <li class='user-pro'><a class='user-parent-profile' >VIEW PROFILE</a></li>
-                <li class='user-verify-account'> <a class='user-parent-account' ><i class='fa fa-envelope-o' aria-hidden='true'></i>VERIFY ACCOUNT</a></li>
-                <li class='user-logout'><a class='user-parent-logout' ><i class='fa fa-sign-out' aria-hidden='true'></i>LOGOUT</a></li>
+                <li class='user-pro'><a class='user-parent-profile' ><i class='fa fa-user-o' aria-hidden='true'></i>  VIEW PROFILE</a></li>
+                <li class='user-verify-account'> <a class='user-parent-account' ><i class='fa fa-envelope-o' aria-hidden='true'></i>  VERIFY ACCOUNT</a></li>
+                <li class='user-logout'><a class='user-parent-logout' ><i class='fa fa-sign-out' aria-hidden='true'></i>  LOGOUT</a></li>
             </ul>
         </li>";
 

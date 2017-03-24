@@ -385,3 +385,19 @@ $(document).ready(function(){
        return false;
     });
 });
+
+//================================
+//注销登录 logout
+$(document).ready(function(){
+    $(document).on("click",".user-logout", function(){
+        $.ajax({
+        	url:"functions/php/logout.php",
+        	type:"POST",
+        });
+    });
+});
+
+//============================
+//
+
+

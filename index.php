@@ -6,22 +6,22 @@
    include root."maroon5/includes/dbh.php";
 
   
-    if (isset($_SESSION["id"])) {
-        //显示用户名
-        // echo $_SESSION["id"];
-        require("functions/php/header_login.php");
+    // if (isset($_SESSION["id"])) {
+    //     //显示用户名
+    //     // echo $_SESSION["id"];
+    //     require("functions/php/header_login.php");
 
-        echo "<script type='text/javascript'>";
-        echo "window.onload = function(){";   
-        echo "var login = document.getElementById('login-li');"  ;
-        echo " login.style.display = 'none'; ";    
-        echo "}";    
-        echo " </script>" ;
-    } else {
-        //显示register
-        require("index.php");
+    //     echo "<script type='text/javascript'>";
+    //     echo "window.onload = function(){";   
+    //     echo "var login = document.getElementById('login-li');"  ;
+    //     echo " login.style.display = 'none'; ";    
+    //     echo "}";    
+    //     echo " </script>" ;
+    // } else {
+    //     //显示register
+    //     require("index.php");
 
-    }
+    // }
 
    
 ?>
@@ -346,6 +346,27 @@
                                             <li class="user-logout"><a class="user-parent-logout" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</a></li>
                                         </ul>
                                 </li> -->
+                                <!-- 刷新后保持登录 -->
+                                <?php
+                                 
+                                    if (isset($_SESSION["id"])) {
+                                        //显示用户名
+                                        // echo $_SESSION["id"];
+                                        require("functions/php/header_login.php");
+
+                                        echo "<script type='text/javascript'>";
+                                        echo "window.onload = function(){";   
+                                        echo "var login = document.getElementById('login-li');"  ;
+                                        echo " login.style.display = 'none'; ";    
+                                        echo "}";    
+                                        echo " </script>" ;
+                                    } else {
+                                        //显示register
+                                        // require("index.php");
+
+                                    }
+
+                                ?>
                             </ul>
                       
 
