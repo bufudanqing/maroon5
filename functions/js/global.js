@@ -398,6 +398,42 @@ $(document).ready(function(){
 });
 
 //============================
-//
+//news页面点赞功能
+$(document).ready(function(){
+    $(document).on("click", ".flag" ,function(){
+    	//获取页面点赞次数
+    	var count = $(".count").text();
+    	//获取news id数据传递到php
+    	var id= $(".ds-subtitle").attr("rel");
+    	// alert(id);
+    	alert(count);
+         $.ajax({
+            url:"functions/php/like.php",
+            type:"POST",
+            // cache:false,
+            data:{count:count,id:id},
+            success:function(data){
+            	// alert(data);
+            	// console.log(data);
+            	if (data == "0") {
+                    alert("尚未登录");
+            		$("#popup-box1").show();
+            	} 
+            	if (data == "1"){
+            		alert("你已登录");
+            		$("#popup-box1").hide();
+            		// alert();
+            		 // count++;
+            		 // alert($nums);
+            		$("span .count").text("$nums");   
+            	}
+
+
+            }
+
+            
+        });
+    });
+});
 
 
