@@ -396,17 +396,75 @@ $(document).ready(function(){
         });
     });
 });
-
+//============================
+//news页面的loadmore功能
+$(document).ready(function(){
+	$(document).on("click", "#news-show", function(){
+           var no = $("#news-currentresult").val();
+           $.ajax({
+               type:"GET",
+               url:"functions/php/newspageload.php",
+               data:{page:no},
+               success:function(data){
+               	    no++;
+               	    $("#news-currentresult").val(no);
+                    $("#news-showdata").append(data);
+                    // $(".view-news").append(data);
+               }
+           });
+	});
+})
 //============================
 //news页面点赞功能
+// $(document).ready(function(){
+// 	// 获取所有flag元素
+// 	var flaglist = $(".flag");
+// 	// alert(flaglist);
+//     $(document).on("click", $(this) ,function(){
+//     	//获取页面点赞次数
+//     	var count = $(".count").text();
+//     	//获取news id数据传递到php
+//     	var id= $(".ds-subtitle").attr("rel");
+//     	// alert(id);
+//     	// alert(count);
+//          $.ajax({
+//             url:"functions/php/like.php",
+//             type:"POST",
+//             // cache:false,
+//             data:{count:count,id:id},
+//             success:function(data){
+//             	// alert(data);
+//             	var str = data.split(",");
+//             	var bool = str[0];
+//             	var nums = str[1];
+//             	// alert(nums);
+//             	// console.log(data);
+//             	if (bool == "0") {
+//                     alert("尚未登录");
+//             		$("#popup-box1").show();
+//             	} 
+//             	if (bool == "1"){
+//             		// alert("你已登录");
+//             		// $("#popup-box1").hide();
+//             		$("span .count").text(nums);   
+//             	}
+//             }            
+//         });
+//     });
+// });
+
 $(document).ready(function(){
-    $(document).on("click", ".flag" ,function(){
+	// 获取所有flag元素
+	// var flaglist = $(".flag");
+	//事件委托
+    $(".view-news ").delegate(".flag", "click" ,function(){
     	//获取页面点赞次数
-    	var count = $(".count").text();
+    	var $self = $(this);
+    	var count = $(this).find(".count").text();
     	//获取news id数据传递到php
-    	var id= $(".ds-subtitle").attr("rel");
-    	// alert(id);
-    	alert(count);
+    	var id= $(this).parent().siblings().find(".ds-subtitle").attr("rel");
+    	// alert(count);
+    	// alert(id);    	
          $.ajax({
             url:"functions/php/like.php",
             type:"POST",
@@ -414,26 +472,22 @@ $(document).ready(function(){
             data:{count:count,id:id},
             success:function(data){
             	// alert(data);
+            	var str = data.split(",");
+            	var bool = str[0];
+            	var nums = str[1];
+            	// alert(nums);
             	// console.log(data);
-            	if (data == "0") {
+            	if (bool == "0") {
                     alert("尚未登录");
             		$("#popup-box1").show();
             	} 
-            	if (data == "1"){
-            		alert("你已登录");
-            		$("#popup-box1").hide();
-            		// alert();
-            		 // count++;
-            		 // alert($nums);
-            		$("span .count").text("$nums");   
+            	if (bool == "1"){
+            		// alert("你已登录");
+            		// $("#popup-box1").hide();
+            		$("span .count",$self).text(nums);   
             	}
-
-
-            }
-
-            
+            }            
         });
     });
 });
-
 

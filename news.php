@@ -381,15 +381,7 @@
 
 <!-- 主要内容 -->
 
-<?php
-$conn = mysqli_connect("localhost", "root", "", "maroon5");
-$sql = "select * from tour";
-$query = mysqli_query($conn,$sql);
-$count = mysqli_num_rows($query);
-$per_page = 9;
-$total=ceil($count/$per_page);
-// echo $total;
-?> 
+
             <div class="inner-wrapper">
             <!-- 左边新闻部分 -->
                 <div class="view-id-news">
@@ -397,6 +389,7 @@ $total=ceil($count/$per_page);
                         <h2 class="block_title">NEWS</h2>
                     </div>
                     <div class="view-news">
+                    <!-- 1 -->
                         <article class="grid-news">
                             <header class="feature-wrapper">
                                 <div class="feature-background">
@@ -427,40 +420,569 @@ $total=ceil($count/$per_page);
 
                                 
                             </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=1 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
                             <div class="post-footer">
                                     <div class="flag">
                                         <span class="flag-wrapper">
                                             <a class="flag-action" href="#">
                                                 <i class="fa fa-heart-o" ></i>
-                                                <span class="count">0</span>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
                                                 <span class="flag-text" >Like this news post</span>
                                             </a>
                                         </span>
                                     </div>
                                 </div>
                         </article>
+                 <!-- 2 -->
+                        <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/2.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="2">Watch Maroon 5's performance of COLD from the Tonight Show With Jimmy Fallon</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=2 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                 <!-- 3 -->
+                        <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/3.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="3">Watch Maroon 5 performing on Fallon tomorrow!</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=3 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                <!-- 4 -->
+                        <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/4.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="4">Watch Maroon 5 performing on Fallon tomorrow!</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=4 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                <!-- 5 -->
+                        <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/5.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="5">Watch Maroon 5 performing on Fallon tomorrow!</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=5 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                <!-- 6 -->
+                        <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/6.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="6">Watch Maroon 5 performing on Fallon tomorrow!</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=6 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                <!-- 7 -->
+                        <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/7.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="7">Watch Maroon 5 performing on Fallon tomorrow!</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=7 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                <!-- 8 -->
+                       <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/8.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="8">Watch Maroon 5 performing on Fallon tomorrow!</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=8 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                <!-- 9 -->
+                        <article class="grid-news">
+                            <header class="feature-wrapper">
+                                <div class="feature-background">
+                                    <a href="#">
+                                        <img src="images/news/9.jpg" />
+                                    </a>
+                                    
+                                </div>
+                            </header>
+                            <div class="ds-card">
+                                <div>
+                                    <h5>
+                                    <!-- rel属性作为news_id -->
+                                        <a class="ds-subtitle" href="#" rel="9">Watch Maroon 5 performing on Fallon tomorrow!</a>
+                                    </h5>
+                                </div>
+                                <div class="summary">
+                                    <div class="post-name">
+                                        <span>Mar </span>
+                                        <span>23rd </span>
+                                        <span>2017 </span><br />
+                                    </div>
+                                    <div class="post-body">
+                                        <p>We're announcing two new shows in Punta Cana, Dominican Republic &amp; Panama City, Panama....</p>
+                                    </div>
+                               
+                                </div>
+
+                                
+                            </div>
+                    <!-- 动态获取点赞数目并显示 -->
+        <?php
+       $conn = mysqli_connect("localhost", "root", "", "maroon5");
+
+       
+        //从数据库获取count
+        $sql1 = " SELECT * FROM fav WHERE news_id=9 ";
+        $res1 = mysqli_query($conn, $sql1);
+        $nums = mysqli_num_rows($res1);
+        
+        ?>
+                            <div class="post-footer">
+                                    <div class="flag">
+                                        <span class="flag-wrapper">
+                                            <a class="flag-action" href="#">
+                                                <i class="fa fa-heart-o" ></i>
+                                                <?php
+                                                  echo "<span class='count'>". $nums  ."</span>";
+                                                ?>
+                                                <!-- <span class="count">0</span> -->
+                                                <span class="flag-text" >Like this news post</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                        </article>
+                        <div id="news-showdata"></div>
+
                     </div>
+
+                    <ul class="news-load-more">
+                        <li class="pager-next">
+                            <input type="hidden" id="news-currentresult" value="4" />
+                            <!-- <a href="#">LOAD MORE<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
+                            <button id="news-show">Load more<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        </li>
+                     </ul>
                 </div>
 
             <!-- 右侧日程 -->
                 <aside class="sidebar">
-                    
-                </aside>
-
+        <!--     <?php
+                // $conn = mysqli_connect("localhost", "root", "", "maroon5");
+                // $sql = "select * from tour";
+                // $query = mysqli_query($conn,$sql);
+                // $count = mysqli_num_rows($query);
+                // $per_page = 9;
+                // $total=ceil($count/$per_page);
+                // echo $total;
+            ?>  -->
 
             <!-- 页数 -->
                        
-                <div class="tour_pages">
+                <!-- <div class="tour_pages"> -->
                 <?php
-                    for($i=1;$i<=$total;$i++){
+                    // for($i=1;$i<=$total;$i++){
                         ?>
-                         <li id="<?php echo $i; ?>"><?php echo $i; ?></li>
+                         <!-- <li id="<?php echo $i; ?>"><?php echo $i; ?></li> -->
                         <?php
-                    }
+                    // }
 
                 ?>
                 
-                </div>
+                <!-- </div> -->
+
+                <!-- 不需要页数，load时直接从数据库取数据 -->
+                <div class="news-dates">
+                 <h2 class="news-title">TOUR DATES</h2>
+                  
+                 <div class="block_news_content">
+                     <div class="view-news-content">
+                       <div class="view-news-events ">      
+                            <div class="group-left">
+                                <span class="month">DEC</span><br/>
+                                <span class="day">30</span>
+                            </div>
+                            <div class="group-middle">
+                                <div class="field_item_1">
+                                    <span class="locality">Las Vegas ,</span>
+                                    <span class="area"> NV, USA</span>
+                                </div>
+                                <div class="field_item_2">Events Center At Mandalay Bay
+                                </div>
+                                <div class="field_item_3">
+                                    <div class="field_item_3_label">
+                                    Opening:
+                                    </div>
+                                    <div class="field_item_3_location">PJ,PRTON</div>
+                                </div>
+                            </div>
+                            <div class="group-right">
+                                <div class="tickets">
+
+                                    <a class="button tickets"href="http://www.bandsintown.com/event/12143855/buy_tickets?app_id=maroon5&artist=Maroon%205&came_from=67&app_id=maroon5&artist=Maroon%205&came_from=67" target="_blank"><i class="fa fa-ticket" aria-hidden="true"></i> TICKETS</a>
+                                </div>
+                            </div>
+                            
+                         </div> 
+                         
+                        </div>
+                     
+                 </div>
+               
+            </div>
+                    
+                </aside>
+
 
             </div>   
             <!-- 本页主体内容结束 -->
