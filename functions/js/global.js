@@ -491,3 +491,33 @@ $(document).ready(function(){
     });
 });
 
+//======================
+//news页面右侧tour
+$(document).ready(function(){
+	// 这里使用了ready()方法，使用load方法报错
+    $(".view-news-content").ready(function(){
+        $.ajax({
+            
+            type:"POST",
+            url:"functions/php/newstour.php",
+            success:function(data){
+                $(".view-news-content").append(data);
+            }
+
+        });
+    });
+});
+$(document).ready(function(){
+	// 这里使用了ready()方法，使用load方法报错
+    $(".view-fav-list").ready(function(){
+        $.ajax({
+            
+            type:"POST",
+            url:"functions/php/newsfav.php",
+            success:function(data){
+                $(".view-fav-list").append(data);
+            }
+
+        });
+    });
+});

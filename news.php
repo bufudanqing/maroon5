@@ -942,46 +942,67 @@
                 <!-- </div> -->
 
                 <!-- 不需要页数，load时直接从数据库取数据 -->
-                <div class="news-dates">
+             <div class="news-dates">
                  <h2 class="news-title">TOUR DATES</h2>
                   
-                 <div class="block_news_content">
+                 <div class="block_news_content ">
                      <div class="view-news-content">
-                       <div class="view-news-events ">      
+                       <!-- <div class="view-news-events  blue">      
                             <div class="group-left">
-                                <span class="month">DEC</span><br/>
-                                <span class="day">30</span>
-                            </div>
-                            <div class="group-middle">
-                                <div class="field_item_1">
-                                    <span class="locality">Las Vegas ,</span>
-                                    <span class="area"> NV, USA</span>
+                                <div class="group-left-wrapper">
+                                    <span class="month">APR</span><br/>
+                                    <span class="day">29</span>
                                 </div>
-                                <div class="field_item_2">Events Center At Mandalay Bay
-                                </div>
-                                <div class="field_item_3">
-                                    <div class="field_item_3_label">
-                                    Opening:
-                                    </div>
-                                    <div class="field_item_3_location">PJ,PRTON</div>
-                                </div>
+                                
                             </div>
                             <div class="group-right">
+                                <div class="field_item_1">
+                                    <span class="locality">New Orleans Jazz Fest </span><br/>
+                                    <span class="area"> New Orleans, LA, USA</span>
+                                </div>
+                                <br/>
                                 <div class="tickets">
 
                                     <a class="button tickets"href="http://www.bandsintown.com/event/12143855/buy_tickets?app_id=maroon5&artist=Maroon%205&came_from=67&app_id=maroon5&artist=Maroon%205&came_from=67" target="_blank"><i class="fa fa-ticket" aria-hidden="true"></i> TICKETS</a>
                                 </div>
                             </div>
                             
-                         </div> 
+                         </div> --> 
                          
                         </div>
+                        <ul class="dates-load-more">
+                            <li class="pager-next">
+                                <input type="hidden" id="news-currentresult" value="4" />
+                                <!-- <a href="#">LOAD MORE<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
+                                <a href="shows.php" id="dates-show">All Dates<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
                      
                  </div>
                
             </div>
+            <!-- 展示该用户点赞的内容 -->
+            <div class="fav-news">
+                <div class="view-fav">
+                    <div class="view-empty">
+                       
+                        <div class="message-body">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                            <h6>You have no news posts saved to your<br/> favorites</h6><br/><br/><br/>
+                            <p class="description">
+                                Click the &nbsp
+                                <i class="fa fa-heart-o" ></i>&nbsp
+                                on a news post to save it.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="view-fav-list">
+                        
+                    </div>
+                </div>
+            </div>
                     
-                </aside>
+            </aside>
 
 
             </div>   

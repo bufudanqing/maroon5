@@ -2004,8 +2004,50 @@ footer .block_mailing .block_content .webform-client .form-actions #edit-submit{
 }
 .inner-wrapper aside .view-news-events{
 	color: #fff;
+	width: 398px;
+	height: 86px;
+	border:solid 1px black;
+	
+	transition: border 0.5s;
 
 }
+.inner-wrapper aside .view-news-content .blue{
+	background-color: #404C72;
+}
+.inner-wrapper aside .blue .group-right .tickets:hover{
+	background-color: #fff;
+	color: #404C72;
+}
+.inner-wrapper aside .view-news-content .pink{
+	background-color: #FE4C6E;
+}
+.inner-wrapper aside .pink .group-right .tickets:hover{
+	background-color: #fff;
+	color: #FE4C6E;
+}
+.inner-wrapper aside .view-news-content .purple{
+	background-color: #4C3A50;
+}
+.inner-wrapper aside .purple .group-right .tickets:hover{
+	background-color: #fff;
+	color: #4C3A50;
+}
+.inner-wrapper aside .view-news-content .red{
+	background-color: #5A0E1D;
+}
+.inner-wrapper aside .red .group-right .tickets:hover{
+	background-color: #fff;
+	color: #5A0E1D;
+}
+.inner-wrapper aside .view-news-content .green{
+	background-color: #0E5A4C;
+}
+.inner-wrapper aside .green .group-right .tickets:hover{
+	background-color: #fff;
+	color: #0E5A4C;
+}
+
+
 .inner-wrapper aside .view-news-events:hover{
 	border:solid 1px #fff;
 }
@@ -2013,4 +2055,141 @@ footer .block_mailing .block_content .webform-client .form-actions #edit-submit{
      width: 66px;
      height: 78px;
      padding: 4px 7px;
+}
+.inner-wrapper aside .view-news-events .group-left .group-left-wrapper{
+	width: 45px;
+	height: 52px;
+	padding: 10px 10px 15px 10px;
+	 background-image: linear-gradient(to right, #0a0a0a, #333);
+    /*border-top: 1px solid rgba(85, 85, 85, 0.2);*/
+    overflow: hidden;
+
+
+    text-shadow: 0 0 #1a1a1a, 1px 1px #1a1a1a, 2px 2px #1a1a1a, 3px 3px #1a1a1a, 4px 4px #1a1a1a, 5px 5px #1a1a1a, 6px 6px #1a1a1a, 7px 7px #1a1a1a, 8px 8px #1a1a1a, 9px 9px #1a1a1a, 10px 10px #1a1a1a, 11px 11px #1a1a1a, 12px 12px #1a1a1a, 13px 13px #1a1a1a, 14px 14px #1a1a1a, 15px 15px #1a1a1a, 16px 16px #1a1a1a, 17px 17px #1a1a1a, 18px 18px #1a1a1a, 19px 19px #1a1a1a, 20px 20px #1a1a1a, 21px 21px #1a1a1a, 22px 22px #1a1a1a, 23px 23px #1a1a1a, 24px 24px #1a1a1a, 25px 25px #1a1a1a, 26px 26px #1a1a1a, 27px 27px #1a1a1a, 28px 28px #1a1a1a, 29px 29px #1a1a1a, 30px 30px #1a1a1a, 31px 31px #1a1a1a, 32px 32px #1a1a1a, 33px 33px #1a1a1a, 34px 34px #1a1a1a, 35px 35px #1a1a1a, 36px 36px #1a1a1a, 37px 37px #1a1a1a, 38px 38px #1a1a1a, 39px 39px #1a1a1a, 40px 40px #1a1a1a, 41px 41px #1a1a1a, 42px 42px #1a1a1a, 43px 43px #1a1a1a, 44px 44px #1a1a1a, 45px 45px #1a1a1a, 46px 46px #1a1a1a, 47px 47px #1a1a1a, 48px 48px #1a1a1a, 49px 49px #1a1a1a, 50px 50px #1a1a1a, 51px 51px #1a1a1a, 52px 52px #1a1a1a, 53px 53px #1a1a1a, 54px 54px #1a1a1a, 55px 55px #1a1a1a, 56px 56px #1a1a1a, 57px 57px #1a1a1a, 58px 58px #1a1a1a, 59px 59px #1a1a1a, 60px 60px #1a1a1a, 61px 61px #1a1a1a, 62px 62px #1a1a1a, 63px 63px #1a1a1a, 64px 64px #1a1a1a, 65px 65px #1a1a1a, 66px 66px #1a1a1a, 67px 67px #1a1a1a, 68px 68px #1a1a1a, 69px 69px #1a1a1a, 70px 70px #1a1a1a, 71px 71px #1a1a1a, 72px 72px #1a1a1a, 73px 73px #1a1a1a, 74px 74px #1a1a1a, 75px 75px #1a1a1a, 76px 76px #1a1a1a, 77px 77px #1a1a1a, 78px 78px #1a1a1a, 79px 79px #1a1a1a, 80px 80px #1a1a1a, 81px 81px #1a1a1a, 82px 82px #1a1a1a, 83px 83px #1a1a1a, 84px 84px #1a1a1a, 85px 85px #1a1a1a, 86px 86px #1a1a1a, 87px 87px #1a1a1a, 88px 88px #1a1a1a, 89px 89px #1a1a1a, 90px 90px #1a1a1a, 91px 91px #1a1a1a, 92px 92px #1a1a1a, 93px 93px #1a1a1a, 94px 94px #1a1a1a, 95px 95px #1a1a1a, 96px 96px #1a1a1a, 97px 97px #1a1a1a, 98px 98px #1a1a1a, 99px 99px #1a1a1a, 100px 100px #1a1a1a, 101px 101px #1a1a1a, 102px 102px #1a1a1a, 103px 103px #1a1a1a, 104px 104px #1a1a1a, 105px 105px #1a1a1a, 106px 106px #1a1a1a, 107px 107px #1a1a1a, 108px 108px #1a1a1a, 109px 109px #1a1a1a, 110px 110px #1a1a1a, 111px 111px #1a1a1a, 112px 112px #1a1a1a, 113px 113px #1a1a1a, 114px 114px #1a1a1a, 115px 115px #1a1a1a, 116px 116px #1a1a1a, 117px 117px #1a1a1a, 118px 118px #1a1a1a, 119px 119px #1a1a1a, 120px 120px #1a1a1a, 121px 121px #1a1a1a, 122px 122px #1a1a1a, 123px 123px #1a1a1a, 124px 124px #1a1a1a, 125px 125px #1a1a1a, 126px 126px #1a1a1a, 127px 127px #1a1a1a, 128px 128px #1a1a1a, 129px 129px #1a1a1a, 130px 130px #1a1a1a, 131px 131px #1a1a1a, 132px 132px #1a1a1a, 133px 133px #1a1a1a, 134px 134px #1a1a1a, 135px 135px #1a1a1a, 136px 136px #1a1a1a, 137px 137px #1a1a1a, 138px 138px #1a1a1a, 139px 139px #1a1a1a, 140px 140px #1a1a1a, 141px 141px #1a1a1a, 142px 142px #1a1a1a, 143px 143px #1a1a1a, 144px 144px #1a1a1a, 145px 145px #1a1a1a, 146px 146px #1a1a1a, 147px 147px #1a1a1a, 148px 148px #1a1a1a, 149px 149px #1a1a1a, 150px 150px #1a1a1a, 151px 151px #1a1a1a, 152px 152px #1a1a1a, 153px 153px #1a1a1a, 154px 154px #1a1a1a, 155px 155px #1a1a1a, 156px 156px #1a1a1a, 157px 157px #1a1a1a, 158px 158px #1a1a1a, 159px 159px #1a1a1a, 160px 160px #1a1a1a, 161px 161px #1a1a1a, 162px 162px #1a1a1a, 163px 163px #1a1a1a, 164px 164px #1a1a1a, 165px 165px #1a1a1a, 166px 166px #1a1a1a, 167px 167px #1a1a1a, 168px 168px #1a1a1a, 169px 169px #1a1a1a, 170px 170px #1a1a1a, 171px 171px #1a1a1a, 172px 172px #1a1a1a, 173px 173px #1a1a1a, 174px 174px #1a1a1a, 175px 175px #1a1a1a, 176px 176px #1a1a1a, 177px 177px #1a1a1a, 178px 178px #1a1a1a, 179px 179px #1a1a1a, 180px 180px #1a1a1a, 181px 181px #1a1a1a, 182px 182px #1a1a1a, 183px 183px #1a1a1a, 184px 184px #1a1a1a, 185px 185px #1a1a1a, 186px 186px #1a1a1a, 187px 187px #1a1a1a, 188px 188px #1a1a1a, 189px 189px #1a1a1a, 190px 190px #1a1a1a, 191px 191px #1a1a1a, 192px 192px #1a1a1a, 193px 193px #1a1a1a, 194px 194px #1a1a1a, 195px 195px #1a1a1a, 196px 196px #1a1a1a, 197px 197px #1a1a1a, 198px 198px #1a1a1a, 199px 199px #1a1a1a, 200px 200px #1a1a1a;
+}
+.inner-wrapper aside .view-news-events .group-left .month{
+	width: 46px;
+	height: 12px;
+	font-size: 14px;
+	font-family: "Source Sans Pro";
+	text-align: center;
+}
+.inner-wrapper aside .view-news-events .group-left .day{
+	width: 45px;
+	height: 40px;
+	font-size: 35px;
+	font-style: italic;
+    font-family: "Source Sans Pro";
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+    font-weight: 800;
+}
+.inner-wrapper aside .view-news-events .group-right{
+	width: 304px;
+	height: 76px;
+	padding: 4px 7px;
+	color: #eee;
+	margin: 0 auto;
+}
+.inner-wrapper aside .view-news-events .group-right .field_item_1 span{
+	/*clear:right;*/
+	cursor: pointer;
+}
+.inner-wrapper aside .view-news-events .group-right .field_item_1 .locality{
+	/*width: 142px;*/
+	height: 20px;
+	font-size: 15px;
+	font-family: "Source Sans Pro";
+
+}
+.inner-wrapper aside .view-news-events .group-right .field_item_1 .area{
+	height: 24px;
+	font-family: "Source Sans Pro";
+	font-weight: 700;
+}
+.inner-wrapper aside .view-news-events .group-left,.group-right{
+	float: left;
+}
+.inner-wrapper aside .view-news-events .group-right .tickets{
+    width: 87px;
+    height: 26px;
+    color: #eee;
+    margin:2px 2px 0 0 ;
+    transition: background-color 0.5s;
+}
+.inner-wrapper aside .view-news-events .group-right .tickets a{
+	display: block;
+	width: 65px;
+	height: 22px;
+	text-decoration: none;
+	padding: 0 10px;
+	border:solid 1px #eee;
+	font-size: 12px;
+	line-height: 22px;
+}
+.inner-wrapper aside .news-dates .block_news_content .dates-load-more{
+	display: block;
+	width: 400px;
+	height: 43px;
+	padding: 24px 0;
+	
+}
+.inner-wrapper aside .news-dates .block_news_content .dates-load-more li{
+	list-style: none;
+}
+.inner-wrapper aside .news-dates .block_news_content .dates-load-more li #dates-show{
+	background-color: #2F2F2F;
+	border:none;
+	display: block;
+	width: 400px;
+	height: 43px;
+	text-decoration: none;
+	
+	color: #fff;
+	font-family: "Source Sans Pro";
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: right;
+
+    
+
+}
+.inner-wrapper aside .news-dates .block_news_content .dates-load-more  #dates-show i{
+	/*display: block;*/
+	width: 30px;
+	height: 43px;
+	line-height: 43px;
+	font-size: 18px;
+	background-color: #3F3F3F;
+	margin-left: 10px;
+	text-align: center !important;
+}
+.inner-wrapper aside .fav-news{
+	margin: 400px
+	height:96px;
+	margin-top:36px;
+}
+.inner-wrapper aside .fav-news .view-fav .message-body .fa-info{
+	font-style: italic;
+	color: #ccc;
+	width: 22px;
+}
+
+.inner-wrapper aside .fav-news .view-fav .message-body{
+	font-family: Montserrat;
+	color: #ccc;
+}
+.inner-wrapper aside .fav-news .view-fav .message-body h6{
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+.inner-wrapper aside .fav-news .view-fav .message-body .description{
+	font-size: 15px;
+	font-weight: 100;
+	font-family: "Source Sans Pro";
+}
+.inner-wrapper aside .fav-news .view-fav .message-body .fa-info,h6{
+	float: left;
 }
