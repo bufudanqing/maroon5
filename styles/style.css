@@ -1816,6 +1816,9 @@ footer .block_mailing .block_content .webform-client .form-actions #edit-submit{
 
 
 }
+aside{
+	height: auto;
+}
 .inner-wrapper .view-id-news,aside{
 	float: left;
 }
@@ -2192,4 +2195,26 @@ footer .block_mailing .block_content .webform-client .form-actions #edit-submit{
 }
 .inner-wrapper aside .fav-news .view-fav .message-body .fa-info,h6{
 	float: left;
+}
+.inner-wrapper aside .fav-news .view-fav .view-fav-list .fav-list-title a{
+	text-decoration: none;
+	font-family: "Source Sans Pro";
+	font-size: 16px;
+	color: #ccc;
+	width: 400px;
+	height: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	margin-bottom: 5px;
+
+}
+.inner-wrapper aside .fav-news .view-fav .view-fav-list h6{
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 20px;
+	font-family: "Source Sans Pro";
+
+	color: #ccc;
+	text-align: center;
+	margin: 0 auto;
 }

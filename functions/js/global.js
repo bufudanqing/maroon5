@@ -514,7 +514,9 @@ $(document).ready(function(){
             
             type:"POST",
             url:"functions/php/newsfav.php",
+            
             success:function(data){
+            	$(".view-empty").css({display:"none"});
                 $(".view-fav-list").append(data);
             }
 

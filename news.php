@@ -997,7 +997,8 @@
                         </div>
                     </div>
                     <div class="view-fav-list">
-                        
+
+                         <i class="fa fa-heart-o" style="color: #D90555;"></i>&nbsp<h6>RECENT FAVOURITE</h6>
                     </div>
                 </div>
             </div>
